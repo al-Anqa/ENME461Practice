@@ -9,16 +9,22 @@ def y(x):
 t = np.arange(0, 14.05, 0.05)
 # print(t)
 
+# create pandas dataframe object
 df = pd.DataFrame({
     'time (t)': t, 
-    'y(t)': y(t)})
-print(df.head(10))
+    'y(t)': y(t)}
+)
 
+# print(df.head(10))
+
+# get moving average for 10, 4, and 30 units, respectively
 nums = [10, 4, 30]
 for n in nums:
     df[f'{n}MA'] = df['y(t)'].rolling(n, 1).mean()
 
-print(df.head(10))
+# print(df.head(10))
+
+# plotted the graphs
 plt.figure(1)
 plt.subplot(3, 1, 1)
 plt.plot(df['time (t)'], df['y(t)'])
@@ -35,4 +41,5 @@ plt.plot(df['time (t)'], df['10MA'])
 plt.xlabel('Time, t (s)')
 plt.ylabel('10 Measurement MA')
 
+# plt.savefig('Assignment 2\Q1b - Graph')
 plt.show()
