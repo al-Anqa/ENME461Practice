@@ -37,9 +37,9 @@ plt.xlabel('Time, t (s)')
 plt.ylabel('4 Measurement MA')
 
 plt.subplot(3, 1, 3)
-plt.plot(df['time (t)'], df['10MA'])
+plt.plot(df['time (t)'], df['30MA'])
 plt.xlabel('Time, t (s)')
-plt.ylabel('10 Measurement MA')
+plt.ylabel('30 Measurement MA')
 
-# plt.savefig('Assignment 2\Q1b - Graph')
+plt.savefig('Assignment 2\Q1b - Graph')
 plt.show()
