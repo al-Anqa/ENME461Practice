@@ -41,5 +41,5 @@ plt.plot(df['time (t)'], df['30MA'])
 plt.xlabel('Time, t (s)')
 plt.ylabel('30 Measurement MA')
 
-plt.savefig('Assignment 2\Q1b - Graph')
+# plt.savefig('Assignment 2\Q1b - Graph')
 plt.show()
